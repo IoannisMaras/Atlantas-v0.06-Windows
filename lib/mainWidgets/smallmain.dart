@@ -1,3 +1,4 @@
+import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart';
 
 class SmallMain extends StatefulWidget {
@@ -10,6 +11,8 @@ class SmallMain extends StatefulWidget {
 class _SmallMainState extends State<SmallMain> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container());
+    return const ScaffoldPage(
+      content: Center(child: Text("smallPage")),
+    );
   }
 }

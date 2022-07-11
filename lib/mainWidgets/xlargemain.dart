@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 class XlargeMain extends StatefulWidget {
   XlargeMain({Key? key}) : super(key: key);
@@ -10,8 +10,8 @@ class XlargeMain extends StatefulWidget {
 class _XlargeMainState extends State<XlargeMain> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return const ScaffoldPage(
+      content: Center(
         child: Text('XLarge Window test'),
       ),
     );

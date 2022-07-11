@@ -1,7 +1,14 @@
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
+import 'package:atlantas_windows/mainWidgets/largemain.dart';
+import 'package:atlantas_windows/mainWidgets/mediummain.dart';
+import 'package:atlantas_windows/mainWidgets/smallmain.dart';
 import 'package:flutter_adaptive_ui/flutter_adaptive_ui.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 import 'mainWidgets/xlargemain.dart';
+import 'mainWidgets/largemain.dart';
+import 'mainWidgets/mediummain.dart';
+import 'mainWidgets/smallmain.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +19,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return FluentApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        accentColor: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -44,26 +51,27 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return AdaptiveBuilder(
         defaultBuilder: (BuildContext context, Screen screen) {
-          return Scaffold();
+          return ScaffoldPage(
+            content: Center(
+              child: Icon(
+                FluentIcons.account_browser,
+                color: Colors.orange,
+              ),
+            ),
+          );
         },
         layoutDelegate: AdaptiveLayoutDelegateWithScreenSize(
           xSmall: (BuildContext context, Screen screen) {
             return XSmall();
           },
           small: (BuildContext context, Screen screen) {
-            return const Center(
-              child: Text('Small Window'),
-            );
+            return SmallMain();
           },
           medium: (BuildContext context, Screen screen) {
-            return const Center(
-              child: Text('Medium Window'),
-            );
+            return MediumMain();
           },
           large: (BuildContext context, Screen screen) {
-            return const Center(
-              child: Text('large Window'),
-            );
+            return LargeMain();
           },
           xLarge: (BuildContext context, Screen screen) {
             return XlargeMain();

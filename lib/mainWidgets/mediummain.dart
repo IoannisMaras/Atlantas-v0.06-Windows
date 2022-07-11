@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:fluent_ui/fluent_ui.dart';
 
 class MediumMain extends StatefulWidget {
   MediumMain({Key? key}) : super(key: key);
@@ -10,6 +10,8 @@ class MediumMain extends StatefulWidget {
 class _MediumMainState extends State<MediumMain> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Container());
+    return const ScaffoldPage(
+      content: Center(child: Text("MediumPage")),
+    );
   }
 }
