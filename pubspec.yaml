@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_adaptive_ui: ^0.8.0+1
   fluent_ui: ^3.12.0
+  bitsdojo_window: ^0.1.2
 
 dev_dependencies:
   flutter_test:
