@@ -22,7 +22,11 @@ class MyApp extends StatelessWidget {
     return FluentApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        accentColor: Colors.blue,
+         accentColor: Colors.orange,
+        brightness: Brightness.dark,
+        glowFactor: 2.0,
+        theme.accentColor?.withOpacity(0.2),
+       
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
